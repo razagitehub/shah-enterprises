@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shah Enterprises</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Global Styles */
+        body {
+            background-color: #1E1E2F;
+            color: #EAEAEA;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #2B2D42;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: #FFD700;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        /* Tools Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        /* Tool Card Styles */
+        .tool-card {
+            background-color: #3A3D5B;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .tool-card:hover {
+            background-color: #FFD700;
+            color: #1E1E2F;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(255, 215, 0, 0.3);
+        }
+
+        .tool-card h2 {
+            margin-bottom: 15px;
+            color: inherit;
+        }
+
+        .tool-card p {
+            margin-bottom: 20px;
+            color: inherit;
+            flex-grow: 1;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            background-color: #FFD700;
+            color: #1E1E2F;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #E6C200;
+        }
+
+        .tool-card:hover .btn {
+            background-color: #1E1E2F;
+            color: #FFD700;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2B2D42;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            color: #EAEAEA;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tool-card {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .tool-card:nth-child(1) { animation-delay: 0.1s; }
+        .tool-card:nth-child(2) { animation-delay: 0.2s; }
+        .tool-card:nth-child(3) { animation-delay: 0.3s; }
+        .tool-card:nth-child(4) { animation-delay: 0.4s; }
+        .tool-card:nth-child(5) { animation-delay: 0.5s; }
+        .tool-card:nth-child(6) { animation-delay: 0.6s; }
+        .tool-card:nth-child(7) { animation-delay: 0.7s; }
+        .tool-card:nth-child(8) { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>shah enterprises</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="tools-grid">
+            <!-- Tool Card 1 -->
+            <div class="tool-card">
+                <h2>Customer Add</h2>
+                <p>Easily add new customers to your database with our intuitive interface and quick form submission.</p>
+                <button class="btn" onclick="redirectToTool('Customer Add')">Access Tool</button>
+            </div>
+
+            <!-- Tool Card 2 -->
+            <div class="tool-card">
+                <h2>Recharge</h2>
+                <p>Process customer recharges quickly and efficiently with our streamlined recharge system.</p>
+                <button class="btn" onclick="redirectToTool('Recharge')">Access Tool</button>
+            </div>
+
+            <!-- Tool Card 3 -->
+            <div class="tool-card">
+                <h2>Invoice</h2>
+                <p>Generate professional invoices with customizable templates and automatic calculations.</p>
+                <button class="btn" onclick="redirectToTool('Invoice')">Access Tool</button>
+            </div>
+
+            <!-- Tool Card 4 -->
+            <div class="tool-card">
+                <h2>Automatic Bill Reminder</h2>
+                <p>Never miss a payment with our automated bill reminder system that notifies both you and your customers.</p>
+                <button class="btn" onclick="redirectToTool('Automatic Bill Reminder')">Access Tool</button>
+            </div>
+
+            <!-- Tool Card 5 -->
+            <div class="tool-card">
+                <h2>Email</h2>
+                <p>Send professional emails to customers with our integrated email system and templates.</p>
+                <button class="btn" onclick="redirectToTool('Email')">Access Tool</button>
+            </div>
+
+            <!-- Tool Card 6 -->
+            <div class="tool-card">
+                <h2>Reports</h2>
+                <p>Generate detailed business reports with analytics to track your performance and growth.</p>
+                <button class="btn" onclick="redirectToTool('Reports')">Access Tool</button>
+            </div>
+
+            <!-- Tool Card 7 -->
+            <div class="tool-card">
+                <h2>Support</h2>
+                <p>Access our 24/7 customer support system for any questions or issues you may encounter.</p>
+                <button class="btn" onclick="redirectToTool('Support')">Access Tool</button>
+            </div>
+
+            <!-- Tool Card 8 -->
+            <div class="tool-card">
+                <h2>Settings</h2>
+                <p>Customize your dashboard and tools to match your business needs and preferences.</p>
+                <button class="btn" onclick="redirectToTool('Settings')">Access Tool</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Shah Enterprises. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for button interactions
+        function redirectToTool(toolName) {
+            alert(`Redirecting to ${toolName}`);
+            // In a real implementation, this would navigate to the tool page
+            // window.location.href = `/tools/${toolName.toLowerCase().replace(' ', '-')}`;
+        }
+
+        // Add touch event listeners for better mobile interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.btn');
+            
+            buttons.forEach(button => {
+                button.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+                
+                button.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
